@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .Header {
@@ -23,9 +23,8 @@
 }
 
 .Navegation {
-    
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .Navegation a {
@@ -34,7 +33,6 @@
   font-weight: 500;
   position: relative;
 }
-
 
 .Footer {
   background: #523101;
@@ -51,26 +49,425 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .Main {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
-
-
-
-
-
-
 @media (max-width: 440px) {
-
   .Footer-Conteudo {
     flex-direction: column;
     gap: 12px;
-    
+  }
+}
+/* =========================================
+           1. CONFIGURAÇÕES GERAIS (VARIÁVEIS)
+           =========================================
+           Aqui definimos as cores e fontes num só lugar.
+           Se mudar aqui, muda em todo o site.
+        */
+:root {
+  --cor-fundo: #fdfdfd; /* Off-white */
+  --cor-texto: #222222; /* Preto suave */
+  --cor-destaque: #d4c4a8; /* Bege/Dourado */
+  --cor-primaria: #1a1a1a; /* Preto principal */
+  --largura-maxima: 1280px; /* Largura do site */
+}
+
+/* =========================================
+           2. RESET BÁSICO
+           =========================================
+           Removemos as margens padrão do navegador para ter controlo total.
+        */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que o tamanho inclua bordas */
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6; /* Altura da linha para melhor leitura */
+}
+
+/* =========================================
+           3. ESTRUTURA PRINCIPAL
+           =========================================
+        */
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  padding: 0 20px; /* Espaço nas laterais */
+}
+
+/* Títulos elegantes com fonte diferente */
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Times New Roman", serif;
+  letter-spacing: 1px; /* Espaço entre letras */
+}
+
+/* Estilo genérico para botões */
+.btn {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid var(--cor-primaria);
+  cursor: pointer;
+  transition: 0.3s; /* Animação suave ao passar o rato */
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--cor-primaria);
+}
+
+/* =========================================
+           4. CABEÇALHO (HEADER)
+           =========================================
+        */
+header {
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky; /* Cola o menu no topo ao rolar */
+  top: 0;
+  z-index: 1000; /* Fica acima de tudo */
+}
+
+nav {
+  display: flex; /* Coloca logo e menu lado a lado */
+  justify-content: space-between; /* Espalha os itens */
+  align-items: center; /* Alinha verticalmente */
+  height: 80px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex; /* Links lado a lado */
+  gap: 30px; /* Espaço entre os links */
+  list-style: none; /* Remove bolinhas da lista */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Carrinho */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+.cart-count {
+  background-color: var(--cor-primaria);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%; /* Faz o círculo */
+  position: absolute;
+  top: -5px;
+  right: -8px;
+}
+
+/* =========================================
+           5. SECÇÃO HERO (BANNER)
+           =========================================
+        */
+.hero {
+  /* Imagem de fundo com uma sombra escura por cima */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover; /* Cobre toda a área */
+  background-position: center;
+  height: 600px;
+
+  /* Centralizar texto no meio do banner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+           6. GRID DE PRODUTOS
+           =========================================
+        */
+.categories-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+/* O Grid principal: 3 Colunas */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+  gap: 40px; /* Espaço entre colunas */
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.category-header h2 {
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+}
+
+/* Cartão do Produto */
+.product-card {
+  margin-bottom: 40px;
+  transition: opacity 0.3s;
+}
+
+.product-card:hover {
+  opacity: 0.8;
+}
+
+.product-image-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #f0f0f0;
+  display: flex; /* Para centralizar o ícone */
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.product-info {
+  padding: 15px 0;
+}
+
+.product-title {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.product-price {
+  display: block;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Botão simples de texto ("Adicionar") */
+.btn-buy {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--cor-texto);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-bottom: 2px;
+  transition: 0.3s;
+}
+
+.btn-buy:hover {
+  color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+/* =========================================
+           7. OUTRAS SECÇÕES (Checkout, Testemunhos, Contacto)
+           =========================================
+        */
+
+/* Zona de Compra / Checkout */
+.checkout-zone {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.cart-mockup {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Testemunhos */
+.testimonials {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.testimonial-card {
+  background: #fdfdfd;
+  padding: 30px;
+  border: 1px solid #eee;
+  text-align: center;
+  font-style: italic;
+}
+
+.testimonial-author {
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--cor-primaria);
+}
+
+/* FAQ: Estilo para abrir e fechar */
+.faq-section {
+  padding: 80px 0;
+  background-color: #fdfdfd;
+}
+
+details {
+  border: 1px solid #eaeaea;
+  margin-bottom: 5px;
+  background: white;
+}
+
+summary {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  list-style: none; /* Remove seta padrão */
+}
+
+details p {
+  padding: 15px;
+  border-top: 1px solid #eaeaea;
+  color: #666;
+}
+
+/* Contacto */
+.contact-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #888;
+  padding: 60px 0;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  gap: 40px;
+}
+
+.footer-links h3 {
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+}
+
+.legal-text {
+  border-top: 1px solid #222;
+  margin-top: 50px;
+  padding-top: 20px;
+  font-size: 0.8rem;
+}
+
+/* =========================================
+           8. RESPONSIVIDADE (MOBILE)
+           =========================================
+           Regras que só aplicam se a tela for menor que 850px.
+        */
+@media (max-width: 850px) {
+  /* Transforma grids de 3 ou 2 colunas em 1 só */
+  .category-grid,
+  .testimonial-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 
+  /* Esconde o menu no telemóvel para simplificar */
+  .nav-links {
+    display: none;
+  }
 
+  nav {
+    justify-content: center;
+  }
+
+  /* Ajusta tamanho da fonte do banner */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }
