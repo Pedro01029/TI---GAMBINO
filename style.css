@@ -382,7 +382,7 @@ details p {
   text-align: center;
   padding: 16px 32px;
   font-size: 15px;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
 }
