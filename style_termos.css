@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Main {
+  padding-top: 70px;
+}
+
+/* Header */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  background: #523101;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.Logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.Navegation {
+  display: flex;
+  gap: 24px;
+}
+
+.Navegation a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+
+/* Footer */
+.Footer {
+  background: #523101;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 15px;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+}
+
+.Footer-Conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Main {
+  padding-top: 70px;
+}
+
+@media (max-width: 440px) {
+  .Footer-Conteudo {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+
+/* Termos e condições */
+.termos {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.termos h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.termos h2 {
+  margin-top: 30px;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.termos p {
+  margin: 15px 0;
+}
+
+.termos ul {
+  margin: 15px 0 15px 20px;
+}
+
+.termos li {
+  margin-bottom: 10px;
+}
