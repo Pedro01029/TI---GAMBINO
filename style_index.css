@@ -60,6 +60,18 @@ h3,
   cursor: pointer;
   transition: 0.3s; /* Animação suave ao passar o rato */
 }
+.btn-enviar {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid var(--cor-primaria);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 20px; /* Animação suave ao passar o rato */
+}
 
 .btn:hover {
   background-color: white;
@@ -81,6 +93,7 @@ h3,
   top: 0;
   width: 100%;
   z-index: 5;
+  border-radius: 6px;
 }
 
 .Logo {
@@ -430,4 +443,14 @@ details p {
 .product-card:hover .product-image-container img {
   transform: scale(1.05);
   filter: brightness(0.95);
+}
+
+
+@media (max-width: 440px) {
+  .Footer-Conteudo {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  
 }
