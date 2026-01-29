@@ -25,6 +25,7 @@
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.5px;
+
 }
 
 .Navegation {
@@ -66,4 +67,33 @@
     gap: 12px;
   }
 }
+
+/* Politica */
+
+.politica{
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.politica h1{
+  text-align: center;
+  margin-top: 35px;
+  color: black;
+}
+
+.politica h2{
+  margin-top: 40px;
+  color: black;
+  border-bottom: 3px solid white;
+  padding-bottom: 8px;
+}
+
+.politica p {
+  margin: 15px 0;
+}
+
 
