@@ -1,6 +1,3 @@
-
-
-
 /* =========================================
            1. CONFIGURAÇÕES GERAIS (VARIÁVEIS)
            =========================================
@@ -184,6 +181,7 @@ h3,
 .product-card {
   margin-bottom: 40px;
   transition: opacity 0.3s;
+  margin-bottom: 40px;
 }
 
 .product-card:hover {
@@ -192,12 +190,13 @@ h3,
 
 .product-image-placeholder {
   width: 100%;
-  height: 300px;
-  background-color: #f0f0f0;
-  display: flex; /* Para centralizar o ícone */
+  height: 350px;
+  background-color: #f4f4f4;
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: #999;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .product-info {
@@ -382,4 +381,53 @@ details p {
   .hero h1 {
     font-size: 2.5rem;
   }
+}
+
+/* Grid de categorias */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* Cabeçalho da categoria */
+.category-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Card do produto */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+/* Container da imagem */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Imagem */
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+/* Hover sutil */
+.product-card:hover .product-image-container img {
+  transform: scale(1.05);
+  filter: brightness(0.95);
 }
