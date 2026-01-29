@@ -431,3 +431,13 @@ details p {
   transform: scale(1.05);
   filter: brightness(0.95);
 }
+
+
+@media (max-width: 440px) {
+  .Footer-Conteudo {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  
+}
