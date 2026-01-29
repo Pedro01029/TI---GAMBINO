@@ -4,18 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
 .Main {
-  padding-top: 90px;
-  padding-bottom: 70px;
-  text-align: center;
-  background-color: beige;
-  border-radius: 17px;
-  width: 80%;
-  margin: auto;
+  padding-top: 70px;
 }
 
 /* Header */
@@ -35,6 +25,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.5px;
+
 }
 
 .Navegation {
@@ -48,6 +39,7 @@ body {
   font-weight: 500;
   position: relative;
 }
+
 
 /* Footer */
 .Footer {
@@ -67,9 +59,50 @@ body {
   justify-content: space-between;
 }
 
+
+
+
+
+/* Politica */
+
+.politica{
+  max-width: 75%;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.politica h1{
+  text-align: center;
+  margin-top: 30px;
+  color: black;
+}
+
+.politica h2{
+  margin-top: 30px;
+  color: black;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.politica p {
+  margin: 15px 0;
+}
+
 @media (max-width: 440px) {
   .Footer-Conteudo {
     flex-direction: column;
     gap: 12px;
   }
+
+  .politica{
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
 }
+
+
+
