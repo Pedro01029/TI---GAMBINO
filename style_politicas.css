@@ -61,39 +61,48 @@
 
 
 
-@media (max-width: 440px) {
-  .Footer-Conteudo {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
+
 
 /* Politica */
 
 .politica{
-  max-width: 700px;
-  margin: 50px auto;
+  max-width: 75%;
+  margin: 40px auto;
   background: #fff;
-  padding: 50px;
-  border-radius: 10px;
+  padding: 40px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,1);
 }
 
 .politica h1{
   text-align: center;
-  margin-top: 35px;
+  margin-top: 30px;
   color: black;
 }
 
 .politica h2{
-  margin-top: 40px;
+  margin-top: 30px;
   color: black;
-  border-bottom: 3px solid white;
-  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
 }
 
 .politica p {
   margin: 15px 0;
 }
+
+@media (max-width: 440px) {
+  .Footer-Conteudo {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .politica{
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+
 
 
