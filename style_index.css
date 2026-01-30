@@ -114,21 +114,7 @@ h3,
   position: relative;
 }
 
-/* Carrinho */
-.cart-icon {
-  position: relative;
-  cursor: pointer;
-}
-.cart-count {
-  background-color: var(--cor-primaria);
-  color: white;
-  font-size: 0.7rem;
-  padding: 2px 6px;
-  border-radius: 50%; /* Faz o círculo */
-  position: absolute;
-  top: -5px;
-  right: -8px;
-}
+
 
 /* =========================================
            5. SECÇÃO HERO (BANNER)
@@ -371,23 +357,14 @@ details p {
 /* =========================================
            8. RESPONSIVIDADE (MOBILE)
            =========================================
-           Regras que só aplicam se a tela for menor que 850px.
+           Regras que só aplicam se a tela for menor que 440px.
         */
-@media (max-width: 850px) {
+@media (max-width: 440px) {
   /* Transforma grids de 3 ou 2 colunas em 1 só */
   .category-grid,
   .testimonial-grid,
   .footer-grid {
     grid-template-columns: 1fr;
-  }
-
-  /* Esconde o menu no telemóvel para simplificar */
-  .nav-links {
-    display: none;
-  }
-
-  nav {
-    justify-content: center;
   }
 
   /* Ajusta tamanho da fonte do banner */
