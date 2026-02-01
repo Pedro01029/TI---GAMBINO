@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gambino - Checkout</title>
+    <link rel="stylesheet" href="style_checkout.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="Header">
+      <div class="Logo">GAMBINO</div>
+      <nav class="Navegation">
+        <a href="index.html">Home</a>
+      </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <main class="checkout-main">
+      <div class="container">
+        <h1 class="checkout-title">Finalizar Compra</h1>
+
+        <div class="checkout-wrapper">
+          <!-- Left Column: Billing & Shipping -->
+          <div class="checkout-form-section">
+            <!-- Billing Info -->
+            <div class="checkout-form">
+              <h2 class="form-section-title">Detalhes de Faturação</h2>
+              
+              <form class="form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="empresa">Empresa (Opcional)</label>
+                    <input type="text" id="empresa" name="empresa" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="endereco">Morada</label>
+                  <input type="text" id="endereco" name="endereco" required />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="codigopostal">Código Postal</label>
+                    <input type="text" id="codigopostal" name="codigopostal" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="pais">País</label>
+                  <input type="text" id="pais" name="pais" value="Portugal" required />
+                </div>
+              </form>
+            </div>
+
+            <!-- Shipping Info -->
+            <div class="checkout-form">
+              <h2 class="form-section-title">Detalhes de Envio</h2>
+              
+              <div class="shipping-options">
+                <label class="shipping-option">
+                  <input type="radio" name="shipping" value="standard" checked />
+                  <span class="shipping-label">
+                    <span class="shipping-title">Envio Standard</span>
+                    <span class="shipping-desc">2-4 dias úteis</span>
+                    <span class="shipping-price">Grátis (acima de 100€)</span>
+                  </span>
+                </label>
+
+                <label class="shipping-option">
+                  <input type="radio" name="shipping" value="express" />
+                  <span class="shipping-label">
+                    <span class="shipping-title">Envio Express</span>
+                    <span class="shipping-desc">1 dia útil</span>
+                    <span class="shipping-price">15,00 €</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="checkout-form">
+              <h2 class="form-section-title">Método de Pagamento</h2>
+              
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="card" checked />
+                  <span class="payment-label">Cartão de Crédito / Débito</span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="transfer" />
+                  <span class="payment-label">Transferência Bancária</span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="paypal" />
+                  <span class="payment-label">PayPal</span>
+                </label>
+              </div>
+
+              <!-- Card Details (shown when card is selected) -->
+              <form class="form" id="card-form">
+                <div class="form-group">
+                  <label for="cardname">Nome no Cartão</label>
+                  <input type="text" id="cardname" name="cardname" />
+                </div>
+
+                <div class="form-group">
+                  <label for="cardnumber">Número do Cartão</label>
+                  <input type="text" id="cardnumber" name="cardnumber" placeholder="1234 5678 9012 3456" />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cardexpiry">Validade</label>
+                    <input type="text" id="cardexpiry" name="cardexpiry" placeholder="MM/YY" />
+                  </div>
+                  <div class="form-group">
+                    <label for="cardcvc">CVC</label>
+                    <input type="text" id="cardcvc" name="cardcvc" placeholder="123" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Order Summary -->
+          <div class="order-summary-section">
+            <div class="order-summary">
+              <h2 class="summary-title">Resumo da Encomenda</h2>
+
+              <!-- Order Items -->
+              <div class="order-items">
+                <div class="order-item">
+                  <div class="item-details">
+                    <span class="item-name">Camisa Slim Fit Linho</span>
+                    <span class="item-qty">Qtd: 1</span>
+                  </div>
+                  <span class="item-price">59,95 €</span>
+                </div>
+
+                <div class="order-item">
+                  <div class="item-details">
+                    <span class="item-name">Calças Chino Bege</span>
+                    <span class="item-qty">Qtd: 1</span>
+                  </div>
+                  <span class="item-price">69,95 €</span>
+                </div>
+
+                <div class="order-item">
+                  <div class="item-details">
+                    <span class="item-name">Botas Chelsea Pele</span>
+                    <span class="item-qty">Qtd: 1</span>
+                  </div>
+                  <span class="item-price">129,95 €</span>
+                </div>
+              </div>
+
+              <!-- Summary Totals -->
+              <div class="order-summary-totals">
+                <div class="summary-line">
+                  <span>Subtotal</span>
+                  <span>259,85 €</span>
+                </div>
+                <div class="summary-line">
+                  <span>Envio</span>
+                  <span id="shipping-cost">Grátis</span>
+                </div>
+                <div class="summary-line">
+                  <span>IVA (23%)</span>
+                  <span>59,77 €</span>
+                </div>
+                <div class="summary-line total">
+                  <span>Total</span>
+                  <span id="total-amount">319,62 €</span>
+                </div>
+              </div>
+
+              <!-- Terms & Conditions -->
+              <div class="checkout-terms">
+                <label class="checkbox-label">
+                  <input type="checkbox" required />
+                  <span>Concordo com os <a href="termos.html">Termos e Condições</a></span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" />
+                  <span>Concordo com a <a href="politicas.html">Política de Privacidade</a></span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button class="btn-checkout">Confirmar Encomenda</button>
+              <a href="index.html" class="btn-continue">Continuar Comprando</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="Footer">
+      <div class="Footer-Conteudo">
+        <p>© 2026 Todos os direitos reservados.</p>
+        <p>GAMBINO</p>
+        <nav class="Navegation">
+          <a href="politicas.html">Politicas</a>
+          <a href="termos.html">Termos</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -12,6 +12,9 @@
       <div class="Logo">GAMBINO</div>
       <nav class="Navegation">
         <a href="index.html">Home</a>
+        <a href="camisas.html">Camisas</a>
+        <a href="calcas.html">Calças</a>
+        <a href="sapatos.html">Sapatos</a>
       </nav>
     </header>
 
@@ -45,7 +48,7 @@
               <div class="product-info">
                 <h3 class="product-title">Camisa Slim Fit Linho</h3>
                 <span class="product-price">59,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="camisas.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
 
@@ -57,7 +60,7 @@
               <div class="product-info">
                 <h3 class="product-title">Camisa Oxford Branca</h3>
                 <span class="product-price">49,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="camisas.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
 
@@ -69,7 +72,7 @@
               <div class="product-info">
                 <h3 class="product-title">Polo Piqué Premium</h3>
                 <span class="product-price">39,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="camisas.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
           </div>
@@ -87,7 +90,7 @@
               <div class="product-info">
                 <h3 class="product-title">Calças Chino Bege</h3>
                 <span class="product-price">69,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="calcas.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
 
@@ -98,7 +101,7 @@
               <div class="product-info">
                 <h3 class="product-title">Jeans Regular Fit</h3>
                 <span class="product-price">59,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="calcas.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
 
@@ -109,7 +112,7 @@
               <div class="product-info">
                 <h3 class="product-title">Calças de Flanela Cinza</h3>
                 <span class="product-price">89,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="calcas.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
           </div>
@@ -127,7 +130,7 @@
               <div class="product-info">
                 <h3 class="product-title">Mocassins em Camurça</h3>
                 <span class="product-price">99,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="sapatos.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
 
@@ -138,7 +141,7 @@
               <div class="product-info">
                 <h3 class="product-title">Botas Chelsea Pele</h3>
                 <span class="product-price">129,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="sapatos.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
 
@@ -149,7 +152,7 @@
               <div class="product-info">
                 <h3 class="product-title">Sapatilhas Pele Branca</h3>
                 <span class="product-price">79,95 €</span>
-                <button class="btn-buy">Adicionar ao Carrinho</button>
+                <a href="sapatos.html" class="btn-buy">Ver Detalhes</a>
               </div>
             </article>
           </div>
@@ -173,12 +176,13 @@
             <p style="font-family: serif; font-size: 1.1rem; color: #111">
               Subtotal: 0,00 €
             </p>
-            <button
+            <a
+              href="checkout.html"
               class="btn"
               style="margin-top: 20px; background-color: #333; color: white"
             >
               Checkout Seguro
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -279,21 +283,33 @@
               required
             ></textarea>
           </div>
+          
+          <div class="form-group-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="politicas" name="politicas" required />
+              <span>Aceito a <a href="politicas.html" target="_blank">Política de Privacidade</a></span>
+            </label>
+          </div>
+          
+          <div class="form-group-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="termos" name="termos" required />
+              <span>Aceito os <a href="termos.html" target="_blank">Termos e Condições</a></span>
+            </label>
+          </div>
+          
           <button type="submit" class="btn-enviar">Enviar</button>
         </form>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="Footer">
+ <footer class="Footer">
       <div class="Footer-Conteudo">
         <p>© 2026 Todos os direitos reservados.</p>
         <p>GAMBINO</p>
         <nav class="Navegation">
           <a href="politicas.html">Politicas</a>
           <a href="termos.html">Termos</a>
-          <a href="contacto.html">Contacto</a>
-          <a href="FAQ.html">FAQ</a>
         </nav>
       </div>
     </footer>

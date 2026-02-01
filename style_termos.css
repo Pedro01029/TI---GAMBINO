@@ -1,11 +1,56 @@
+/* =========================================
+           1. CONFIGURAÇÕES GERAIS (VARIÁVEIS)
+           =========================================
+           Aqui definimos as cores e fontes num só lugar.
+           Se mudar aqui, muda em todo o site.
+        */
+:root {
+  --cor-fundo: #fdfdfd; /* Off-white */
+  --cor-texto: #222222; /* Preto suave */
+  --cor-destaque: #d4c4a8; /* Bege/Dourado */
+  --cor-primaria: #1a1a1a; /* Preto principal */
+  --largura-maxima: 1280px; /* Largura do site */
+}
+
+/* =========================================
+           2. RESET BÁSICO
+           =========================================
+           Removemos as margens padrão do navegador para ter controlo total.
+        */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que o tamanho inclua bordas */
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6; /* Altura da linha para melhor leitura */
 }
 
 .Main {
   padding-top: 70px;
+}
+
+/* =========================================
+           3. ESTRUTURA PRINCIPAL
+           =========================================
+        */
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  padding: 0 20px; /* Espaço nas laterais */
+}
+
+/* Títulos elegantes com fonte diferente */
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Times New Roman", serif;
+  letter-spacing: 1px; /* Espaço entre letras */
 }
 
 /* Header */
@@ -19,12 +64,25 @@
   position: fixed;
   top: 0;
   width: 100%;
+  transition: all 0.3s ease;
+}
+
+.Header:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: #6b3f0f;
 }
 
 .Logo {
   font-size: 30px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  font-family: "Times New Roman", serif;
+  transition: all 0.3s ease;
+}
+
+.Logo:hover {
+  transform: scale(1.05);
+  color: var(--cor-destaque);
 }
 
 .Navegation {
@@ -37,8 +95,19 @@
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  transition: all 0.3s ease;
 }
 
+.Navegation a:hover {
+  color: var(--cor-destaque);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+           4. HEADER E FOOTER
+           =========================================
+        */
 
 /* Footer */
 .Footer {
@@ -50,6 +119,12 @@
   /* position: fixed; */
   bottom: 0;
   width: 100%;
+  transition: all 0.3s ease;
+}
+
+.Footer:hover {
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  background: #6b3f0f;
 }
 
 .Footer-Conteudo {
@@ -58,45 +133,94 @@
   justify-content: space-between;
 }
 
+.Footer-Conteudo nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.Footer-Conteudo nav a:hover {
+  color: var(--cor-destaque);
+  transform: translateY(-2px);
+}
 
 
 
-/* Termos e condições */
+
+/* =========================================
+           5. CONTEÚDO PRINCIPAL (TERMOS E CONDIÇÕES)
+           =========================================
+        */
+
 .termos {
-  max-width: 75%;
+  max-width: var(--largura-maxima);
   margin: 40px auto;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,1);
+  background: var(--cor-fundo);
+  padding: 40px 20px;
 }
 
 .termos h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #111;
+  color: var(--cor-primaria);
+  font-family: "Times New Roman", serif;
+  letter-spacing: 1px;
+  font-size: 2.5em;
 }
 
 .termos h2 {
   margin-top: 30px;
-  color: #222;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: var(--cor-primaria);
+  font-family: "Times New Roman", serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--cor-destaque);
+  padding-bottom: 10px;
+  font-size: 1.5em;
 }
 
 .termos p {
   margin: 15px 0;
+  color: var(--cor-texto);
+  line-height: 1.8;
 }
 
 .termos ul {
-  margin: 15px 0 15px 20px;
+  margin: 15px 0 15px 30px;
+  color: var(--cor-texto);
 }
 
 .termos li {
   margin-bottom: 10px;
+  line-height: 1.8;
 }
 
 
+
+/* =========================================
+           6. RESPONSIVO
+           =========================================
+        */
+
+@media (max-width: 850px) {
+  .Header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .termos {
+    padding: 30px 15px;
+  }
+
+  .termos h1 {
+    font-size: 2em;
+  }
+
+  .termos h2 {
+    font-size: 1.3em;
+  }
+}
 
 @media (max-width: 440px) {
   .Footer-Conteudo {
@@ -104,12 +228,28 @@
     gap: 12px;
   }
 
-  .termos {
-  max-width: 90%;
-  margin: 20px auto;
-  padding: 10px;
-}
+  .Navegation {
+    flex-direction: column;
+    gap: 12px;
+  }
 
+  .termos {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px 10px;
+  }
+
+  .termos h1 {
+    font-size: 1.5em;
+  }
+
+  .termos h2 {
+    font-size: 1.1em;
+  }
+
+  .termos ul {
+    margin: 15px 0 15px 20px;
+  }
 }
 
 

@@ -1,0 +1,552 @@
+/* =========================================
+           CHECKOUT PAGE STYLES
+           =========================================
+           Extends and adapts the main Gambino design
+           for the checkout page.
+        */
+
+/* =========================================
+           1. VARIÁVEIS (Herdam do index)
+           =========================================
+        */
+:root {
+  --cor-fundo: #fdfdfd;
+  --cor-texto: #222222;
+  --cor-destaque: #d4c4a8;
+  --cor-primaria: #1a1a1a;
+  --cor-header: #523101;
+  --cor-borda: #e0e0e0;
+  --cor-bg-form: #fcfcfc;
+  --largura-maxima: 1280px;
+}
+
+/* =========================================
+           2. RESET BÁSICO
+           =========================================
+        */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================================
+           3. ESTRUTURA PRINCIPAL
+           =========================================
+        */
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Times New Roman", serif;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+           4. CABEÇALHO (HEADER)
+           =========================================
+        */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  background: var(--cor-header);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.Header:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: #6b3f0f;
+}
+
+.Logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.Logo:hover {
+  transform: scale(1.05);
+  color: var(--cor-destaque);
+}
+
+.Navegation {
+  display: flex;
+  gap: 24px;
+}
+
+.Navegation a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.Navegation a:hover {
+  color: var(--cor-destaque);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+           5. MAIN CHECKOUT CONTENT
+           =========================================
+        */
+.checkout-main {
+  margin-top: 80px;
+  padding: 60px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.checkout-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  color: var(--cor-primaria);
+}
+
+.checkout-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* =========================================
+           6. FORM SECTION
+           =========================================
+        */
+.checkout-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.checkout-form {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.form-section-title {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-bg-form);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  background: white;
+}
+
+/* =========================================
+           7. SHIPPING OPTIONS
+           =========================================
+        */
+.shipping-options,
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.shipping-option,
+.payment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shipping-option:hover,
+.payment-option:hover {
+  border-color: var(--cor-primaria);
+  background: #f9f9f9;
+}
+
+.shipping-option input[type="radio"],
+.payment-option input[type="radio"] {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.shipping-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.shipping-title,
+.payment-label {
+  font-weight: 500;
+  color: var(--cor-primaria);
+}
+
+.shipping-desc {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.shipping-price {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-texto);
+}
+
+/* =========================================
+           8. ORDER SUMMARY SECTION
+           =========================================
+        */
+.order-summary-section {
+  display: flex;
+}
+
+.order-summary {
+  position: sticky;
+  top: 120px;
+  background: white;
+  border: 1px solid var(--cor-borda);
+  padding: 30px;
+  border-radius: 4px;
+  height: fit-content;
+}
+
+.summary-title {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+.order-items {
+  border-bottom: 1px solid var(--cor-borda);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--cor-primaria);
+}
+
+.item-qty {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.item-price {
+  font-weight: 500;
+  color: var(--cor-primaria);
+  white-space: nowrap;
+}
+
+/* =========================================
+           9. ORDER SUMMARY TOTALS
+           =========================================
+        */
+.order-summary-totals {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.summary-line.total {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  padding-top: 10px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+/* =========================================
+           10. TERMS & BUTTONS
+           =========================================
+        */
+.checkout-terms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--cor-primaria);
+}
+
+.checkbox-label a {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+.checkbox-label a:hover {
+  color: var(--cor-destaque);
+}
+
+.btn-checkout {
+  width: 100%;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 15px;
+  border: 1px solid var(--cor-primaria);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.btn-checkout:hover {
+  background-color: white;
+  color: var(--cor-primaria);
+}
+
+.btn-continue {
+  display: block;
+  width: 100%;;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  background: white;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.btn-continue:hover {
+  background: #f5f5f5;
+  border-color: var(--cor-primaria);
+}
+
+/* =========================================
+           11. FOOTER
+           =========================================
+        */
+.Footer {
+  background: var(--cor-header);
+  color: #e5e7eb;
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 15px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.Footer-Conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Footer-Conteudo a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Footer-Conteudo a:hover {
+  color: white;
+}
+
+/* =========================================
+           12. RESPONSIVIDADE (TABLET & MOBILE)
+           =========================================
+        */
+@media (max-width: 1024px) {
+  .checkout-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+
+  .checkout-form {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-wrapper {
+    gap: 30px;
+  }
+
+  .Header {
+    padding: 12px 16px;
+  }
+
+  .Logo {
+    font-size: 24px;
+  }
+
+  .Navegation {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .checkout-main {
+    margin-top: 70px;
+    padding: 30px 0;
+  }
+
+  .checkout-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .checkout-form {
+    padding: 15px;
+  }
+
+  .form-section-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  .Footer-Conteudo {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .Navegation {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+}
