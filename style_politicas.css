@@ -144,16 +144,17 @@ h3,
   color: var(--cor-destaque);
   transform: translateY(-2px);
 }
-=========================================
+
+/* =========================================
            5. CONTEÚDO PRINCIPAL (POLÍTICAS)
            =========================================
         */
 
 .politica {
-  max-width: var(--largura-maxima);
+  max-width: 75%;
   margin: 40px auto;
-  background: var(--cor-fundo);
-  padding: 40px 20px;
+  background: #fff;
+  padding: 40px;
 }
 
 .politica h1 {
